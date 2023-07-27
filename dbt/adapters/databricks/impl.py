@@ -124,6 +124,7 @@ class DatabricksAdapter(SparkAdapter):
         sql: str,
         auto_begin: bool = False,
         fetch: bool = False,
+        limit: Optional[int] = None,
         *,
         staging_table: Optional[BaseRelation] = None,
     ) -> Tuple[AdapterResponse, Table]:
